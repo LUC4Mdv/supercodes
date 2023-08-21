@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/emojis/936974683117588522.webp?size=96&amp;quality=lossless" type="image/gif" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>SuperCodes - Loja online.</title>
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo">
+                <h1><span class="super">< </span>SuperCodes<span class="super"> ></span></h1>
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li>InÍcio</li>
+                        <li>Produtos</li>
+                        <li>Suporte</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container-logout">
+            <ul>
+                <li>Entrar agora</li>
+                <li class="register">Começar agora <i class="fa-solid fa-arrow-right"></i></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="principal">
+            <div class="text-section">
+                <h2>
+                    Garanta seu serviço de <br>
+                    <span class="auto-type"></span> utilizando nossa plataforma
+                </h2>                
+                <p>Eleve o nível de seu servidor criando uma loja totalmente automática e intuitiva para começar a vender produtos e benefícios a seus jogadores. Temos um painel completo para você gerenciar tudo que precisa sem dores de cabeça.</p>
+            </div>
+            <div class="img-section">
+              <img src="section-principal.svg" alt="Imagem ilustrativa" width="480px">
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings : ["Bots", "Sites"],
+            typeSpeed : 100,
+            backSpeed : 100,
+            loop: true,
+        })
+    </script>
+    <script>
+        window.onload = function () {
+      document.addEventListener(
+        "contextmenu",
+        function (e) {
+          e.preventDefault();
+        },
+        false
+      );
+
+      document.addEventListener(
+        "keydown",
+        function (e) {
+          //document.onkeydown = function(e) {
+          // "I" key
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+            disabledEvent(e);
+          }
+          // "J" key
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            disabledEvent(e);
+          }
+          // "S" key + macOS
+          if (
+            e.keyCode == 83 &&
+            (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+          ) {
+            disabledEvent(e);
+          }
+          // "U" key
+          if (e.ctrlKey && e.keyCode == 85) {
+            disabledEvent(e);
+          }
+          // "F12" key
+          if (event.keyCode == 123) {
+            disabledEvent(e);
+          }
+        },
+        false
+      );
+
+      function disabledEvent(e) {
+        if (e.stopPropagation) {
+          e.stopPropagation();
+        } else if (window.event) {
+          window.event.cancelBubble = true;
+        }
+        e.preventDefault();
+        return false;
+      }
+    };
+    </script>
+
+    <script>
+      var rev = "fwd";
+      function titlebar(val) {
+      var msg = "SuperCodes - Loja";
+      var res = " ";
+      var speed = 200;
+      var pos = val;
+      msg = "" + msg + "";
+      var le = msg.length;
+      if (rev == "fwd") {
+        if (pos < le) {
+          pos = pos + 1;
+          scroll = msg.substr(0, pos);
+          document.title = scroll;
+          timer = window.setTimeout("titlebar(" + pos + ")", speed);
+        }
+      } else {
+        if (pos > 0) {
+          pos = pos - 1;
+          var ale = le - pos;
+          scrol = msg.substr(ale, le);
+          document.title = scrol;
+          timer = window.setTimeout("titlebar(" + pos + ")", speed);
+        } else {
+          rev = "fwd";
+          timer = window.setTimeout("titlebar(" + pos + ")", speed);
+        }
+      }
+    }
+    titlebar(0);
+    </script>
+</body>
+</html>
